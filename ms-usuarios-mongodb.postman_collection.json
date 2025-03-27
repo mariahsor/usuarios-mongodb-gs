@@ -1,0 +1,349 @@
+{
+	"info": {
+		"_postman_id": "04eb7617-6ea3-4689-943a-5e6bb597db35",
+		"name": "ms-usuarios-mongodb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38489512",
+		"_collection_link": "https://x33333-9797.postman.co/workspace/x-Workspace~9ab2e529-9835-4124-8aed-7ed718ba2ca1/collection/38489512-04eb7617-6ea3-4689-943a-5e6bb597db35?action=share&source=collection_link&creator=38489512"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/v1/grupo-salinas-usuarios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Luz\",\r\n  \"apellidos\": \"Soriano\"}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/grupo-salinas-usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"grupo-salinas-usuarios"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "422 - Se deben aceptar términos y condiciones",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Luz\",\r\n  \"apellidoPaterno\": \"Soriano\",\r\n  \"correoElectronico\": \"mango@gmail.com\",\r\n  \"fechaNacimiento\": \"1995-03-01\",\r\n  \"aceptaTerminos\": false\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/grupo-salinas-usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"grupo-salinas-usuarios"
+							]
+						}
+					},
+					"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "223"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Mar 2025 19:05:13 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"transactionID\": \"f5518406-5446-47fb-a71b-28abc1a00f58\",\n        \"status\": \"UNPROCESSABLE_ENTITY\",\n        \"statusCode\": 422,\n        \"timestamp\": \"2025-03-27T13:05:13.662956400\",\n        \"message\": \"Se deben aceptar términos y condiciones\"\n    },\n    \"data\": null\n}"
+				},
+				{
+					"name": "422 - Ya existe un usuario registrado con ese correo electrónico",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Luz\",\r\n  \"apellidoPaterno\": \"Soriano\",\r\n  \"correoElectronico\": \"mango@gmail.com\",\r\n  \"fechaNacimiento\": \"1995-03-01\",\r\n  \"aceptaTerminos\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/grupo-salinas-usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"grupo-salinas-usuarios"
+							]
+						}
+					},
+					"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "242"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Mar 2025 19:06:18 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"transactionID\": \"8505f9dd-943b-43b1-93e7-4cc20ed95256\",\n        \"status\": \"UNPROCESSABLE_ENTITY\",\n        \"statusCode\": 422,\n        \"timestamp\": \"2025-03-27T13:06:18.360930900\",\n        \"message\": \"Ya existe un usuario registrado con ese correo electrónico\"\n    },\n    \"data\": null\n}"
+				},
+				{
+					"name": "200 - Guardado con éxito",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Mario\",\r\n  \"apellidoPaterno\": \"Hernandez\",\r\n  \"correoElectronico\": \"fresas@gmail.com\",\r\n  \"fechaNacimiento\": \"1995-03-01\",\r\n  \"aceptaTerminos\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/grupo-salinas-usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"grupo-salinas-usuarios"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "245"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Mar 2025 19:26:55 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"transactionID\": \"42df65de-dbe1-4e5f-abed-2637a0759b3e\",\n        \"status\": \"OK\",\n        \"statusCode\": 200,\n        \"timestamp\": \"2025-03-27T13:26:37.686765100\"\n    },\n    \"data\": {\n        \"mensaje\": \"Usuario guardado con éxito\",\n        \"nombre\": \"Mario\",\n        \"correoElectronico\": \"fresas@gmail.com\"\n    }\n}"
+				},
+				{
+					"name": "422 - Todos los campos son obligatorios",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Mario\",\r\n  \"apellidoPaterno\": \"Hernandez\",\r\n  \"correoElectronico\": \"fresas@gmail.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/grupo-salinas-usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"grupo-salinas-usuarios"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "207"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Mar 2025 20:09:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"transactionID\": \"e4d5d2e0-2c15-4848-ba96-4ede904c5bea\",\n        \"status\": \"BAD_REQUEST\",\n        \"statusCode\": 400,\n        \"timestamp\": \"2025-03-27T14:09:39.780423200\",\n        \"message\": \"Todos los campos son obligatorios\"\n    },\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/api/v1/grupo-salinas-usuarios Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Luz\",\r\n  \"apellidos\": \"Soriano\"}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/grupo-salinas-usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"grupo-salinas-usuarios"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/grupo-salinas-usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"grupo-salinas-usuarios"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "446"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Mar 2025 20:07:58 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"meta\": {\n        \"transactionID\": \"72f15d2a-fc97-4fb7-8ff3-d1d3b72eda06\",\n        \"status\": \"OK\",\n        \"statusCode\": 200,\n        \"timestamp\": \"2025-03-27T13:38:04.080511600\"\n    },\n    \"data\": [\n        {\n            \"id\": \"67e5a181778da777e4347346\",\n            \"nombre\": \"Luz\",\n            \"apellidoPaterno\": \"Soriano\",\n            \"correoElectronico\": \"mango@gmail.com\",\n            \"fechaNacimiento\": \"1995-03-01\"\n        },\n        {\n            \"id\": \"67e5a67fe226830ae2690a84\",\n            \"nombre\": \"Mario\",\n            \"apellidoPaterno\": \"Hernandez\",\n            \"correoElectronico\": \"fresas@gmail.com\",\n            \"fechaNacimiento\": \"1995-03-01\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
