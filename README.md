@@ -88,6 +88,14 @@ mongo
 
 - La configuración de conexión a la base de datos está definida en el archivo application.yml. ✅
 
+
+## 🧪 Pruebas
+Ejecutar todas las pruebas unitarias:
+
+```bash
+mvn test
+```
+
 ## Cliente Postman
 
 Hay una **colección adjunta* en la raíz de este proyecto con ejemplos de las diferentes respuestas que la aplicación puede retornar.
